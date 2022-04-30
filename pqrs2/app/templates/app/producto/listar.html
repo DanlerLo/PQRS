@@ -37,7 +37,7 @@
 
 <header class="navigation fixed-top">
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand font-tertiary h3" href="index"><img src="{% static 'images/path900.png' %}" width="90" height="100" alt="Myself"></a>
+    <a class="navbar-brand font-tertiary h3" href="{% url 'home' %}"><img src="{% static 'images/path900.png' %}" width="90" height="100" alt="Myself"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
       aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -72,21 +72,21 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <h2 class="section-title">Agregar Nuevo Estudiante</h2>
+        <br><br><h2 class="section-title">Agregar Nuevo Estudiante</h2>
       </div>
-      <div class="col-lg-8 mx-auto">
+      <div class="col-lg-1 ">
         <div class="bg-white rounded text-center p-5 shadow-down">
           <h4 class="mb-80"></h4>
           <form action="#" class="row" method="post">
             <div class="col-12 col-12-mobilep">
-    <br>
-    <br>
-    <br>
-    <div class="card">
-        <div class="col-2 col-md-4 offset-md-3">
+    </div>
+    </div>
+    </div>
+ 
+    <div align="card" >
+        <div class="row">
             <h4>Listado de productos</h4>
-            
-            <table class="table table-striped table-hover table-responsive-sm col-12 col-md-8 offset-md-3" >
+            <table class="table" 
                 <tr>
                   <th>Fecha</th>
                   <th>Radicado</th>
@@ -100,6 +100,7 @@
                   <th>Cargo</th> 
                   <th>Descripcion</th>
                   <th>Terminos y Condiciones</th>
+
                 </tr>
                 {% for p in registro %}
                 <tr>
@@ -115,11 +116,13 @@
                   <td>{{p.Cargo|title}}</td>
                   <td>{{p.Deescripcion|title}}</td>
                   <td>{{p.Terminos_y_condiciones|title}}</td>
-                    <td>
-                        <a href="{% url 'modificar_producto' p.id %}" class="btn btn-info btn-sm">Modificar</a>
-                        <a href="{% url 'eliminar_producto' p.id %}" class="btn btn-danger btn-sm">Eliminar</a>
-                    </td>
+                  <td>
+                  <ol> <a href="{% url 'modificar_producto' p.id %}" class="btn btn-info btn-sm ">Modificar</a>  </ol>
+                  <ol> <a href="{% url 'eliminar_producto' p.id %}" class="btn btn-danger btn-sm">Eliminar</a> </ol>
+                  </td>
+                  
                 </tr>
+            </div>
                 {% endfor %}
             </table>
             
@@ -127,14 +130,26 @@
     </div>
 {% endblock %} 
           </form>
-        </div>
+          
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+      
       </div>
     </div>
   </div>
 </section>
+</main>
 <!-- /contact -->
 
 <!-- footer -->
+
 <footer class="bg-dark footer-section">
   <div class="section">
     <div class="container">
@@ -160,7 +175,6 @@
         document.write(CurrentYear)
       </script> Designed &amp; Developed by <a class="text-white-50" href="Themefisher">Themefisher</a></p>
   </div>
-</footer>
 <!-- /footer -->
 
 <!-- jQuery -->

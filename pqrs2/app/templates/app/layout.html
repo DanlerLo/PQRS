@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PQRS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../../static/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/style2.css">
+</head>
+<body>
+
+	<header class="main-head">
+		<nav class="main">
+			<h1 id="logo"><img src="../../static/images/cosfa.png" height="70"></h1>
+			<ul>
+				<li><a href="{% url 'home' %}">Inicio</a></li>
+				<li><a href="{% url 'peticiones' %}">Peticiones</a></li>
+				<li><a href="{% url 'quejas' %}">Quejas</a></li>
+				<li><a href="{% url 'reclamos' %}">Reclamos</a></li>
+				<li><a href="{% url 'sugerencias' %}">Sugerencias</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-------------------------------------
+					Messages 
+	-------------------------------------->
+
+	<!-------------------------------------
+					Navigation Bar 
+	-------------------------------------->
+	<div class="main">
+
+		<nav class="second-nav">
+			<a class="new" href="#">Crear una nota</a>
+		</nav>
+
+
+		{% block content %}
+
+		{% endblock content %}
+
+
+
+	</div>
+
+	<footer>
+		<div class="row">
+			<p>PQRS con Django<br>hecha por: x personas</a></p>
+		</div>
+	</footer>
+
+</body>
+</html>

@@ -14,6 +14,22 @@ def blog(request):
 def portfolio(request):
     return render(request, 'app/portfolio.html') 
 
+def peticiones(request):
+    return render(request, 'app/peticiones.html') 
+
+def quejas(request):
+    return render(request, 'app/quejas.html') 
+
+def reclamos(request):
+    return render(request, 'app/reclamos.html') 
+
+def sugerencias(request):
+    return render(request, 'app/sugerencias.html') 
+
+
+def post(request):
+    return render(request, 'app/post.html')
+
 def registros(request):
     data = {
 
