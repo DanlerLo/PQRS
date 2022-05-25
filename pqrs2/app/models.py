@@ -44,15 +44,14 @@ class registro(models.Model):
 
 
 class Perfil(models.Model):
-    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
-    imagen = models.ImageField(default='cosfa.png')
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f'Perfil de {self.usuario.username}'
+        return f'Perfil de {self.user.username}'
 
 class Post(models.Model):
-	usuario = models.ForeignKey(
-	    User, on_delete=models.CASCADE, related_name='posts')
+	user = models.ForeignKey(
+	    User, on_delete=models.CASCADE, related_name='Post')
 	timestamp = models.DateTimeField(default=timezone.now)
 	content = models.TextField()
 
